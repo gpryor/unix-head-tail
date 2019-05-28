@@ -4,7 +4,7 @@ var series = require('async').series
 M = (s) => { console.log(s); return s }
 
 var fn = 'test.txt'
-var gold = (n, m) => { return [0,1,2,3,4,5,6,7,9].slice(n, m+1).join('\n') }
+var gold = (n, m) => { return [0,1,2,3,4,5,6,7,9].slice(n, m+1).join('\n') + '\n' }
 var is = (a, b) => { return a.toString() == b.toString() }
 var check = (n, m, cb) => {
   return (err, b) => {

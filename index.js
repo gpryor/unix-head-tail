@@ -36,6 +36,7 @@ function readFileRange(filePath, begByte, endByte, cb) {
       })
     })
   })
+  out[out.length - 1] = 10
 }
 
 module.exports = function(filePath, begLine, endLine, cb) {
@@ -45,7 +46,7 @@ module.exports = function(filePath, begLine, endLine, cb) {
   return lineNoToEndIdx(filePath, begLine - 1, (err, begByte) => {
     lineNoToEndIdx(filePath, endLine, (err, endByte) => {
       if (begByte > 0) begByte++
-      readFileRange(filePath, begByte, endByte - 1, (err, b) => {
+      readFileRange(filePath, begByte, endByte, (err, b) => {
         cb(err, b)
       })
     })
