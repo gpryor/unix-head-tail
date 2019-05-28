@@ -20,6 +20,7 @@ function lineNoToEndIdx(filePath, lineNo, cb) {
         return cb(false, globalIdx)
       }
     } while (idx !== -1)
+    globalIdx = buffer.length + oriGlobalIdx
   }).on("error", () => { cb(true) })
 }
 
