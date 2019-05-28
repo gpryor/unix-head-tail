@@ -1,6 +1,6 @@
 # unix-head-tail
 
-`head -n <endLine> <filename> | tail -n +<begLine> for node.js` for node.js.
+`head -n <endLine> <filename> | tail -n +<begLine>` for node.js.
 
 ```
 var headTail = require('unix-head-tail')
