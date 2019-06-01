@@ -1,5 +1,7 @@
 # unix-head-tail
 
+[![Build Status](https://travis-ci.org/gpryor/unix-head-tail.svg?branch=master)](https://travis-ci.org/gpryor/unix-head-tail)
+
 `head -n <endLine> <filename> | tail -n +<begLine>` for node.js.
 
 ```
